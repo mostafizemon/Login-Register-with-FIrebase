@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "152684077454",
+    "project_id": "login-register-f557f",
+    "storage_bucket": "login-register-f557f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152684077454:android:dd4f9ab7deb568356c84df",
+        "android_client_info": {
+          "package_name": "com.mostafiz.loginregister"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTRPLPv14JqR20sEkn21hfnta9on_xXtY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
