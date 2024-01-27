@@ -78,6 +78,12 @@
             android:text="Remember me"
             android:textColor="@color/black"
             />
+        <ProgressBar
+            android:id="@+id/loginprogressbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            />
 
         <Button
             android:id="@+id/buttonlogin"
