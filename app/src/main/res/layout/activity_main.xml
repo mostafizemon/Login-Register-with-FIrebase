@@ -53,5 +53,11 @@
         android:layout_height="wrap_content"
         android:text="Logout"
         />
+    <Button
+        android:id="@+id/buttonforgetpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget Password"
+        />
 
 </LinearLayout>

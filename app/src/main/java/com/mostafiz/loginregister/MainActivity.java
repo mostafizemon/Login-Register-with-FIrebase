@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     TextView userfullname,useremail,userphone,userdob;
     private String fullname,email,phone,dob;
     FirebaseAuth firebaseuserauth;
-    Button buttonlogout;
+    Button buttonlogout,buttonforgetpass;
     private SharedPreferences sharedPreferences;
 
     @Override
@@ -36,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
         userphone=findViewById(R.id.userphone);
         userdob=findViewById(R.id.userdob);
         buttonlogout=findViewById(R.id.buttonlogout);
+        buttonforgetpass=findViewById(R.id.buttonforgetpass);
+
+        buttonforgetpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ForgetpassActivity.class));
+            }
+        });
         sharedPreferences = getSharedPreferences("loginPrefs", MainActivity.this.MODE_PRIVATE);
 
         buttonlogout.setOnClickListener(new View.OnClickListener() {
