@@ -44,27 +44,26 @@ public class LoginActivity extends AppCompatActivity {
         loginpassword=findViewById(R.id.loginpassword);
         loginprogressbar=findViewById(R.id.loginprogressbar);
         loginbutton=findViewById(R.id.buttonlogin);
-        logincheckbox=findViewById(R.id.logncheckbox);
-
+        logincheckbox=findViewById(R.id.logincheckbox);
         SharedPreferences sharedPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
 
-//        logincheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                // Enable registerButton if CheckBox is checked, disable it otherwise
-//                SharedPreferences.Editor editor = sharedPreferences.edit();
-//                editor.putBoolean("rememberMe", isChecked);
-//                editor.apply();
-//
-//            }
-//        });
-//        boolean rememberMe = sharedPreferences.getBoolean("rememberMe", false);
-//        if (rememberMe) {
-//            // Directly go to MainActivity
-//            Intent intent = new Intent(this, MainActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
+        logincheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Enable registerButton if CheckBox is checked, disable it otherwise
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean("rememberMe", isChecked);
+                editor.apply();
+
+            }
+        });
+        boolean rememberMe = sharedPreferences.getBoolean("rememberMe", false);
+        if (rememberMe) {
+            // Directly go to MainActivity
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         ihavenoaccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,6 +169,15 @@ public class LoginActivity extends AppCompatActivity {
         alertDialog.show();
 
     }
+
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        if (loginfirebaseauth.getCurrentUser() !=null) {
+//            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//            finish();
+//        }
+//    }
 
 
 }
